@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/addApi.dart';
 import 'package:flutter_application_1/api/natwortking/login.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
+import 'package:flutter_application_1/index/search.dart';
 import 'package:flutter_application_1/profileApi.dart';
 
 class Home extends StatelessWidget {
@@ -12,13 +13,13 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
    return DefaultTabController(
-        length: 2,
+        length: 3,
         child: Scaffold(
           body: TabBarView(
             children: [
               Home1(),
               ProfileApi(user),
-              // Test4(),
+              Search(),
               // Horoscope(),
             ],
           ),
@@ -31,9 +32,9 @@ class Home extends StatelessWidget {
               Tab(
                 text: "โปรไฟล์",
               ),
-              // Tab(
-              //   text: "เลขเด็ด",
-              // ),
+              Tab(
+                text: "ค้นหา",
+              ),
               // Tab(
               //   text: "ดวงความรัก ",
               // ),

@@ -22,14 +22,21 @@ class _potScreenState extends State<potScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('')),
+      backgroundColor: Color.fromARGB(255, 242, 60, 133),
+      
       body: Container(
+        
         padding: const EdgeInsets.all(20),
         child: Form(
           child: SingleChildScrollView(
+            
             child: Column(
+              
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
+                SizedBox(
+                  height: 50,
+                ),
                 Text(
                   'name',
                   style: TextStyle(fontSize: 20),

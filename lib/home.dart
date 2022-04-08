@@ -37,7 +37,7 @@ class Home extends StatelessWidget {
                 text: "ค้นหา",
               ),
               Tab(
-                text: "ดวงความรัก ",
+                text: "ดูดวง ",
               ),
             ],
           ),

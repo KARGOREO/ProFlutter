@@ -9,69 +9,93 @@ class AddApi extends StatefulWidget {
 }
 
 class _AddApiState extends State<AddApi> {
-  
   String name = "";
   String pass = "";
   String email = "";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('')),
+      appBar: AppBar(
+        title: Text('สมัครสมาชิก'),
+        elevation: 0,
+        backgroundColor: Colors.blueGrey,
+      ),
       body: Container(
         padding: const EdgeInsets.all(20),
         child: Form(
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
+                Image.asset(
+                  'images/5.png',
+                  height: 300,
                 ),
-                
+                Text(
+                  'Sing Up',
+                  style: TextStyle(fontSize: 22),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
                 TextFormField(
                   onChanged: (value) {
                     name = value;
                   },
-                 
+                  decoration: InputDecoration(labelText: "ชื่อ"),
+                  validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
                 ),
                 SizedBox(
                   height: 15,
-                ),
-                Text(
-                  'email',
-                  style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
                   onChanged: (value) {
                     email = value;
                   },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
+                  decoration: InputDecoration(labelText: "อีเมล"),
+                  validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
                 ),
                 SizedBox(
                   height: 15,
-                ),
-                Text(
-                  'password',
-                  style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
                   onChanged: (value) {
                     pass = value;
                   },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อน Password'),
+                  decoration: InputDecoration(labelText: "รหัสผ่าน"),
+                  validator: RequiredValidator(errorText: 'กรุณาป้อนรหัสผ่าน'),
                 ),
+                SizedBox(height: 20),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       onPressed: () async {},
-                      icon: Icon(Icons.app_registration_outlined),
+                      icon: Icon(Icons.app_registration_rounded),
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 209, 160, 0)),
+                          primary: Colors.blueGrey,
+                          shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(30.0),
+                          )),
                       label: Text(
-                        'ตกลง',
-                        style: TextStyle(fontSize: 20),
+                        'สมัครสมาชิก',
+                        style: TextStyle(fontSize: 18),
                       )),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'คุณมีบัญชีผู้ใช้แล้วใช่ไหม?',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    TextButton(
+                      onPressed: (() {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => AddApi()));
+                      }),
+                      child: Text('เข้าสู่ระบบ'),
+                    ),
+                  ],
                 ),
               ],
             ),

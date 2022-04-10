@@ -31,7 +31,7 @@ class _potScreenState extends State<potScreen> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(
-                  'images/1.png',
+                  'images/4.png',
                   height: 300,
                 ),
                 Text(
@@ -47,7 +47,7 @@ class _potScreenState extends State<potScreen> {
                     name = value;
                   },
                   validator: MultiValidator([
-                    RequiredValidator(errorText: 'กรุณาป้อน name'),
+                    RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
                   ]),
                   keyboardType: TextInputType.emailAddress,
                 ),
@@ -58,7 +58,7 @@ class _potScreenState extends State<potScreen> {
                     onChanged: (value) {
                       email = value;
                     },
-                    validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
                     decoration: InputDecoration(labelText: "อีเมล")),
                 SizedBox(
                   height: 10,
@@ -68,7 +68,7 @@ class _potScreenState extends State<potScreen> {
                       pass = value;
                     },
                     validator:
-                        RequiredValidator(errorText: 'กรุณาป้อน Password'),
+                        RequiredValidator(errorText: 'กรุณาป้อนรหัสผ่าน'),
                     decoration: InputDecoration(labelText: "รหัสผ่าน")),
                 SizedBox(
                   height: 10,
@@ -88,11 +88,11 @@ class _potScreenState extends State<potScreen> {
                               context: context,
                               builder: (BuildContext context) => AlertDialog(
                                     title: Text(''),
-                                    backgroundColor: Colors.pink[50],
+                                    backgroundColor: Colors.black,
                                     content: Text(
-                                      '  ใส่ Name ',
+                                      'กรุณาใส่ชื่อ ',
                                       style: TextStyle(
-                                          color: Colors.black, fontSize: 20),
+                                          color: Colors.white, fontSize: 20),
                                     ),
                                     actions: <Widget>[
                                       TextButton(
@@ -114,7 +114,7 @@ class _potScreenState extends State<potScreen> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  ใส่ email ',
+                                      '  ใส่อีเมล ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
@@ -138,7 +138,7 @@ class _potScreenState extends State<potScreen> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  ใส่ passwode ',
+                                      '  ใส่รหัสผ่าน ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
@@ -162,7 +162,7 @@ class _potScreenState extends State<potScreen> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      'ยังบ่ไม่สมัคร',
+                                      'ยังไม่สมัคร',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
@@ -182,7 +182,7 @@ class _potScreenState extends State<potScreen> {
                       },
                       icon: Icon(Icons.login),
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 209, 160, 0),
+                          primary: Colors.amber[600],
                           shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(30.0),
                           )),
@@ -194,9 +194,6 @@ class _potScreenState extends State<potScreen> {
                 Center(
                   child: Row(
                     children: [
-                      // SizedBox(
-                      //   width: 10,
-                      // ),
                       Padding(
                         padding: const EdgeInsets.all(20),
                         child: SizedBox(

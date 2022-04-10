@@ -7,12 +7,13 @@ import 'package:flutter_application_1/index/search.dart';
 import 'package:flutter_application_1/profileApi.dart';
 
 class Home extends StatelessWidget {
-  final User user;
+ final User user;
   const Home(this.user);
+  
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
+   return DefaultTabController(
         length: 4,
         child: Scaffold(
           body: TabBarView(
@@ -23,7 +24,7 @@ class Home extends StatelessWidget {
               Horoscope(),
             ],
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Color.fromARGB(255, 233, 152, 30),
           bottomNavigationBar: TabBar(
             tabs: [
               Tab(

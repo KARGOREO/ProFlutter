@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginApi.dart';
 import 'package:flutter_application_1/api/natwortking/login.dart';
 import 'package:flutter_application_1/deleteApi.dart';
-import 'package:flutter_application_1/update.dart';
 
 class ProfileApi extends StatelessWidget {
   final User user;
@@ -67,7 +66,7 @@ class ProfileApi extends StatelessWidget {
               height: 180,
             ),
             Center(
-              child: Row(
+              child: Wrap(
                 children: [
                    SizedBox(
               width: 20,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/LoginApi.dart';
-import 'package:flutter_application_1/addApi.dart';
+import 'package:flutter_application_1/screen/home.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/index/Horoscope.dart';
 
@@ -19,7 +19,21 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Horoscope(),
+      home: MyHomePage(),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: potScreen(),
     );
   }
 }

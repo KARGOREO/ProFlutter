@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/addApi.dart';
 import 'package:flutter_application_1/api/natwortking/login.dart';
-import 'package:flutter_application_1/home.dart';
-import 'package:flutter_application_1/index/Hom1.dart';
-import 'package:flutter_application_1/main.dart';
-import 'package:flutter_application_1/profileApi.dart';
+import 'package:flutter_application_1/screen/home.dart';
 import 'package:flutter_application_1/update.dart';
 
 import 'package:form_field_validator/form_field_validator.dart';

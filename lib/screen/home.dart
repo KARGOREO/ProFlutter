@@ -23,7 +23,7 @@ class Home extends StatelessWidget {
               Horoscope(),
             ],
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: Colors.blueGrey,
           bottomNavigationBar: TabBar(
             tabs: [
               Tab(

@@ -5,6 +5,7 @@ import 'package:flutter_application_1/home.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/profileApi.dart';
+import 'package:flutter_application_1/update.dart';
 
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:http/http.dart' as http;
@@ -15,14 +16,16 @@ class potScreen extends StatefulWidget {
 }
 
 class _potScreenState extends State<potScreen> {
+
   String name = "";
   String pass = "";
   String email = "";
+  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 242, 60, 133),
+      backgroundColor: Color.fromARGB(255, 215, 244, 249),
       
       body: Container(
         
@@ -34,22 +37,7 @@ class _potScreenState extends State<potScreen> {
               
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(
-                  height: 50,
-                ),
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
-                ),
-                TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                  validator: MultiValidator([
-                    RequiredValidator(errorText: 'กรุณาป้อน name'),
-                  ]),
-                  keyboardType: TextInputType.emailAddress,
-                ),
+               
                 SizedBox(
                   height: 15,
                 ),
@@ -230,7 +218,7 @@ class _potScreenState extends State<potScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => AddApi()));
+                                      builder: (context) => updateApi()));
                             },
                             icon: Icon(Icons.pending),
                             style: ElevatedButton.styleFrom(
@@ -240,6 +228,7 @@ class _potScreenState extends State<potScreen> {
                               style: TextStyle(fontSize: 20),
                             )),
                       ),
+            
                     ],
                   ),
                 ),

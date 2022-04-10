@@ -2,42 +2,36 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginApi.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-import 'api/natwortking/addApi.dart';
+import 'api/natwortking/deleteApi.dart';
 
-class AddApi extends StatefulWidget {
-  const AddApi({Key? key}) : super(key: key);
+class deleteApi extends StatefulWidget {
+  const deleteApi({ Key? key }) : super(key: key);
 
   @override
-  State<AddApi> createState() => _AddApiState();
+  State<deleteApi> createState() => _deleteApiState();
 }
 
-class _AddApiState extends State<AddApi> {
+class _deleteApiState extends State<deleteApi> {
   
   String name = "";
   String pass = "";
   String email = "";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('')),
+     return Scaffold(
+      backgroundColor: Color.fromARGB(255, 215, 244, 249),
+      
       body: Container(
+        
         padding: const EdgeInsets.all(20),
         child: Form(
           child: SingleChildScrollView(
+            
             child: Column(
+              
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
-                ),
-                
-                TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                 
-                ),
+               
                 SizedBox(
                   height: 15,
                 ),
@@ -65,61 +59,14 @@ class _AddApiState extends State<AddApi> {
                   validator: RequiredValidator(errorText: 'กรุณาป้อน Password'),
                 ),
                 SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       onPressed: () async {
-                         User? u = await User.checkLogin(name, pass, email);
-                        if (u == null) {
-                          print("GO");
-                          await showDialog(
-                              context: context,
-                              builder: (BuildContext context) => AlertDialog(
-                                    title: Text(''),
-                                    backgroundColor: Colors.pink[50],
-                                    content: Text(
-                                      '  สมัครเเล้วเด้อ ',
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 20),
-                                    ),
-                                    actions: <Widget>[
-                                      TextButton(
-                                          child: Text('Close'),
-                                          style: TextButton.styleFrom(
-                                            primary: Colors.white,
-                                            backgroundColor: Colors.blue,
-                                          ),
-                                          onPressed: () {
-                                             Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => potScreen()));
-                                          }),
-                                    ],
-                                  ));
-                         
-                        } else if (name == "") {
-                          print("ว่าง");
-                          await showDialog(
-                              context: context,
-                              builder: (BuildContext context) => AlertDialog(
-                                    title: Text(''),
-                                    backgroundColor: Colors.pink[50],
-                                    content: Text(
-                                      '  ใส่ Name ',
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 20),
-                                    ),
-                                    actions: <Widget>[
-                                      TextButton(
-                                          child: Text('Close'),
-                                          style: TextButton.styleFrom(
-                                            primary: Colors.white,
-                                            backgroundColor: Colors.blue,
-                                          ),
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          }),
-                                    ],
-                                  ));
-                        } else if (email == "") {
+                        User? u = await User.checkLogin(name, pass, email);
+                        if (email == "") {
                           print("ว่าง");
                           await showDialog(
                               context: context,
@@ -175,7 +122,7 @@ class _AddApiState extends State<AddApi> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  ERROR ',
+                                      '  ลบเเล้ว ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
@@ -187,20 +134,23 @@ class _AddApiState extends State<AddApi> {
                                             backgroundColor: Colors.blue,
                                           ),
                                           onPressed: () {
-                                            Navigator.pop(context);
+                                  
+                                             Navigator.push(context,
+                              MaterialPageRoute(builder: (context) => potScreen()));
                                           }),
                                     ],
                                   ));
                         }
                       },
-                      icon: Icon(Icons.app_registration_outlined),
+                      icon: Icon(Icons.login),
                       style: ElevatedButton.styleFrom(
                           primary: Color.fromARGB(255, 209, 160, 0)),
                       label: Text(
-                        'ตกลง',
+                        'เข้าสู่ระบบ',
                         style: TextStyle(fontSize: 20),
                       )),
                 ),
+                
               ],
             ),
           ),

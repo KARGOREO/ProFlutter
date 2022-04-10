@@ -9,21 +9,18 @@ import 'package:flutter_application_1/api/natwortking/natwordking.dart';
 class User {
   final int userID;
   final String username;
-
   final String email;
  
 
   User({
     required this.userID,
     required this.username,
-   
-
     required this.email,
   
   });
 
   static Future<User?> checkLogin(String name, String pass,String email) async {
-    NetworkHelper networkHelper = NetworkHelper('my_app/api.php', {});
+    NetworkHelper networkHelper = NetworkHelper('my_app/UPDATE.php', {});
     var json = await networkHelper.postData(jsonEncode(<String, String>{
       'users_name': name,
       'users_pass': pass,
@@ -36,7 +33,6 @@ class User {
         userID: int.parse(u["users_id"]),
         username: u["users_name"], 
         email: u["users_email"],
-
     
         
       );

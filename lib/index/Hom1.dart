@@ -8,16 +8,26 @@ class Home1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            SizedBox(height: 20,),
-            Center(
-              child: SizedBox(
-                height: 200,
-                child: Image.network('http://lottery.plazagold.com/images/lottery_show.jpg'),
+        child: Padding(
+          padding: const EdgeInsets.all(30),
+          child: Column(
+            children: [
+              SizedBox(height: 20,),
+              Center(
+                child: SizedBox(
+                  height: 200,
+                  child: Image.network('http://lottery.plazagold.com/images/lottery_show.jpg'),
+                ),
               ),
-            ),
-          ],
+              Center(
+                child: SizedBox(
+                  height: 200,
+               
+                  child: Image.network('http://goldprice.plazagold.com/images/goldprice-today.jpeg'),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
       

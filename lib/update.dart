@@ -1,24 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/LoginApi.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'api/natwortking/updateApi.dart';
 
-import 'api/natwortking/addApi.dart';
-
-class AddApi extends StatefulWidget {
-  const AddApi({Key? key}) : super(key: key);
+class updateApi extends StatefulWidget {
+  const updateApi({ Key? key }) : super(key: key);
 
   @override
-  State<AddApi> createState() => _AddApiState();
+  State<updateApi> createState() => _updateApiState();
 }
 
-class _AddApiState extends State<AddApi> {
-  
+class _updateApiState extends State<updateApi> {
   String name = "";
   String pass = "";
   String email = "";
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+     return Scaffold(
       appBar: AppBar(title: Text('')),
       body: Container(
         padding: const EdgeInsets.all(20),
@@ -27,17 +25,6 @@ class _AddApiState extends State<AddApi> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
-                ),
-                
-                TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                 
-                ),
                 SizedBox(
                   height: 15,
                 ),
@@ -49,8 +36,23 @@ class _AddApiState extends State<AddApi> {
                   onChanged: (value) {
                     email = value;
                   },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
+                 
                 ),
+                SizedBox(
+                  height: 15,
+                ),
+                Text(
+                  'name',
+                  style: TextStyle(fontSize: 20),
+                ),
+                
+                TextFormField(
+                  onChanged: (value) {
+                    name = value;
+                  },
+                 
+                ),
+                
                 SizedBox(
                   height: 15,
                 ),
@@ -68,8 +70,8 @@ class _AddApiState extends State<AddApi> {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       onPressed: () async {
-                         User? u = await User.checkLogin(name, pass, email);
-                        if (u == null) {
+                         User? update = await User.checkLogin(name, pass, email);
+                        if (email != "") {
                           print("GO");
                           await showDialog(
                               context: context,
@@ -77,7 +79,7 @@ class _AddApiState extends State<AddApi> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  สมัครเเล้วเด้อ ',
+                                      '  เเก้ไขเเล้วเด้อ ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),

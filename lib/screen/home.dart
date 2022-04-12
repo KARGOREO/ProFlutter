@@ -34,15 +34,19 @@ class Home extends StatelessWidget {
           bottomNavigationBar: TabBar(
             tabs: [
               Tab(
+                icon: Icon(Icons.home_filled),
                 text: "Home",
               ),
               Tab(
+                icon: Icon(Icons.account_circle_outlined),
                 text: "โปรไฟล์",
               ),
               Tab(
+                icon: Icon(Icons.search),
                 text: "ค้นหา",
               ),
               Tab(
+                icon: Icon(Icons.add_reaction_sharp),
                 text: "ดูดวง ",
               ),
             ],

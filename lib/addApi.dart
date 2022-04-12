@@ -18,48 +18,53 @@ class _AddApiState extends State<AddApi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('')),
+      appBar: AppBar(
+        title: Text('สมัครสมาชิก'),
+        elevation: 0,
+        backgroundColor: Colors.blueGrey,
+      ),
       body: Container(
         padding: const EdgeInsets.all(20),
         child: Form(
           child: SingleChildScrollView(
             child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
+                Image.asset(
+                  'images/5.png',
+                  height: 300,
+                ),
                 Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
+                  'Sing Up',
+                  style: TextStyle(fontSize: 22),
                 ),
                 TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                ),
+                    onChanged: (value) {
+                      name = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
+                    decoration: InputDecoration(labelText: "ชื่อ")),
                 SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'email',
-                  style: TextStyle(fontSize: 20),
-                ),
                 TextFormField(
-                  onChanged: (value) {
-                    email = value;
-                  },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
-                ),
+                    onChanged: (value) {
+                      email = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
+                    decoration: InputDecoration(labelText: "อีเมล")),
                 SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'password',
-                  style: TextStyle(fontSize: 20),
-                ),
                 TextFormField(
-                  onChanged: (value) {
-                    pass = value;
-                  },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อน Password'),
+                    onChanged: (value) {
+                      pass = value;
+                    },
+                    validator:
+                        RequiredValidator(errorText: 'กรุณาป้อนรหัสผ่าน'),
+                    decoration: InputDecoration(labelText: "รหัสผ่าน")),
+                SizedBox(
+                  height: 15,
                 ),
                 SizedBox(
                   width: double.infinity,
@@ -150,7 +155,7 @@ class _AddApiState extends State<AddApi> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  ใส่ passwode ',
+                                      '  ใส่รหัสผ่าน ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),
@@ -194,11 +199,30 @@ class _AddApiState extends State<AddApi> {
                       },
                       icon: Icon(Icons.app_registration_outlined),
                       style: ElevatedButton.styleFrom(
-                          primary: Color.fromARGB(255, 209, 160, 0)),
+                          primary: Colors.blueGrey,
+                          shape: new RoundedRectangleBorder(
+                            borderRadius: new BorderRadius.circular(30.0),
+                          )),
                       label: Text(
-                        'ตกลง',
-                        style: TextStyle(fontSize: 20),
+                        'สมัครสมาชิก',
+                        style: TextStyle(fontSize: 18),
                       )),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'คุณมีบัญชีผู้ใช้แล้วใช่ไหม?',
+                      style: TextStyle(fontSize: 16),
+                    ),
+                    TextButton(
+                      onPressed: (() {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => AddApi()));
+                      }),
+                      child: Text('เข้าสู่ระบบ'),
+                    ),
+                  ],
                 ),
               ],
             ),

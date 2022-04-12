@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: potScreen(),
+      home: Horoscope(),
     );
   }
 }
@@ -36,7 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: potScreen(),
+      body: Horoscope(),
     );
   }
 }

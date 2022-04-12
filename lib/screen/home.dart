@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/api/natwortking/login.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
-import 'package:flutter_application_1/index/Horoscope.dart';
+import 'package:flutter_application_1/Horoscope/Horoscope.dart';
 import 'package:flutter_application_1/index/search.dart';
 import 'package:flutter_application_1/profileApi.dart';
 

@@ -26,41 +26,31 @@ class _AddApiState extends State<AddApi> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
-                ),
                 TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                ),
+                    onChanged: (value) {
+                      name = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
+                    decoration: InputDecoration(labelText: "ชื่อ")),
                 SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'email',
-                  style: TextStyle(fontSize: 20),
-                ),
                 TextFormField(
-                  onChanged: (value) {
-                    email = value;
-                  },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
-                ),
+                    onChanged: (value) {
+                      email = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
+                    decoration: InputDecoration(labelText: "อีเมล")),
                 SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'password',
-                  style: TextStyle(fontSize: 20),
-                ),
                 TextFormField(
-                  onChanged: (value) {
-                    pass = value;
-                  },
-                  validator: RequiredValidator(errorText: 'กรุณาป้อน Password'),
-                ),
+                    onChanged: (value) {
+                      pass = value;
+                    },
+                    validator:
+                        RequiredValidator(errorText: 'กรุณาป้อนรหัสผ่าน'),
+                    decoration: InputDecoration(labelText: "รหัสผ่าน")),
                 SizedBox(
                   width: double.infinity,
                   child: ElevatedButton.icon(
@@ -150,7 +140,7 @@ class _AddApiState extends State<AddApi> {
                                     title: Text(''),
                                     backgroundColor: Colors.pink[50],
                                     content: Text(
-                                      '  ใส่ passwode ',
+                                      '  ใส่รหัสผ่าน ',
                                       style: TextStyle(
                                           color: Colors.black, fontSize: 20),
                                     ),

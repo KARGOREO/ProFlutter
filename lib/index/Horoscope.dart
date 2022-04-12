@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/index/search.dart';
 
 class Horoscope extends StatelessWidget {
   const Horoscope({Key? key}) : super(key: key);
@@ -37,21 +38,7 @@ class Horoscope extends StatelessWidget {
                           style: TextStyle(fontSize: 18),
                         )),
                   ),
-                  SizedBox(height: 20),
-                  SizedBox(
-                    child: ElevatedButton.icon(
-                        onPressed: () {},
-                        icon: Icon(Icons.arrow_left_outlined),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.blueGrey,
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0),
-                            )),
-                        label: Text(
-                          "ตรวจหวย",
-                          style: TextStyle(fontSize: 18),
-                        )),
-                  )
+                 
                 ]),
           ),
         ),

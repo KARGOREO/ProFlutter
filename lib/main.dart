@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 import 'package:flutter_application_1/LoginApi.dart';
+<<<<<<< HEAD
+=======
+import 'package:flutter_application_1/screen/home.dart';
+>>>>>>> 24710be28fd0bf185ffe0b1c0f9b03f811812942
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/index/Horoscope.dart';
 

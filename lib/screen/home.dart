@@ -12,6 +12,13 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    int _currentIndex = 0;
+    List<Widget> _pageWidget = <Widget>[
+      Home1(),
+      ProfileApi(user),
+      Search(),
+      Horoscope(),
+    ];
     return DefaultTabController(
         length: 4,
         child: Scaffold(
@@ -23,9 +30,7 @@ class Home extends StatelessWidget {
               Horoscope(),
             ],
           ),
-
           backgroundColor: Color.fromARGB(255, 233, 152, 30),
-
           bottomNavigationBar: TabBar(
             tabs: [
               Tab(

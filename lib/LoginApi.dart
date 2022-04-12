@@ -1,15 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/addApi.dart';
 import 'package:flutter_application_1/api/natwortking/login.dart';
-<<<<<<< HEAD
-import 'package:flutter_application_1/home.dart';
-import 'package:flutter_application_1/update.dart';
-=======
+
 import 'package:flutter_application_1/screen/home.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/profileApi.dart';
->>>>>>> 24710be28fd0bf185ffe0b1c0f9b03f811812942
 
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:http/http.dart' as http;
@@ -20,21 +16,14 @@ class potScreen extends StatefulWidget {
 }
 
 class _potScreenState extends State<potScreen> {
-
   String name = "";
   String pass = "";
   String email = "";
-  
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-<<<<<<< HEAD
       backgroundColor: Color.fromARGB(255, 241, 229, 204),
-      
-=======
-      backgroundColor: Colors.white,
->>>>>>> 24710be28fd0bf185ffe0b1c0f9b03f811812942
       body: Container(
         padding: const EdgeInsets.all(25),
         child: Form(
@@ -42,9 +31,6 @@ class _potScreenState extends State<potScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-<<<<<<< HEAD
-               
-=======
                 Image.asset(
                   'images/1.png',
                   height: 300,
@@ -53,20 +39,6 @@ class _potScreenState extends State<potScreen> {
                   'Sing In',
                   style: TextStyle(fontSize: 22),
                 ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(labelText: "ชื่อ"),
-                  onChanged: (value) {
-                    name = value;
-                  },
-                  validator: MultiValidator([
-                    RequiredValidator(errorText: 'กรุณาป้อน name'),
-                  ]),
-                  keyboardType: TextInputType.emailAddress,
-                ),
->>>>>>> 24710be28fd0bf185ffe0b1c0f9b03f811812942
                 SizedBox(
                   height: 10,
                 ),
@@ -98,30 +70,6 @@ class _potScreenState extends State<potScreen> {
                           print("GO");
                           Navigator.push(context,
                               MaterialPageRoute(builder: (context) => Home(u)));
-                        } else if (name == "") {
-                          print("ว่าง");
-                          await showDialog(
-                              context: context,
-                              builder: (BuildContext context) => AlertDialog(
-                                    title: Text(''),
-                                    backgroundColor: Colors.pink[50],
-                                    content: Text(
-                                      '  ใส่ Name ',
-                                      style: TextStyle(
-                                          color: Colors.black, fontSize: 20),
-                                    ),
-                                    actions: <Widget>[
-                                      TextButton(
-                                          child: Text('Close'),
-                                          style: TextButton.styleFrom(
-                                            primary: Colors.white,
-                                            backgroundColor: Colors.blue,
-                                          ),
-                                          onPressed: () {
-                                            Navigator.pop(context);
-                                          }),
-                                    ],
-                                  ));
                         } else if (email == "") {
                           print("ว่าง");
                           await showDialog(
@@ -244,7 +192,7 @@ class _potScreenState extends State<potScreen> {
                               Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => updateApi()));
+                                      builder: (context) => AddApi()));
                             },
                             icon: Icon(Icons.pending),
                             style: ElevatedButton.styleFrom(
@@ -257,7 +205,6 @@ class _potScreenState extends State<potScreen> {
                               style: TextStyle(fontSize: 18),
                             )),
                       ),
-            
                     ],
                   ),
                 ),

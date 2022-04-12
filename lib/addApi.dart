@@ -12,7 +12,6 @@ class AddApi extends StatefulWidget {
 }
 
 class _AddApiState extends State<AddApi> {
-  
   String name = "";
   String pass = "";
   String email = "";
@@ -31,12 +30,10 @@ class _AddApiState extends State<AddApi> {
                   'name',
                   style: TextStyle(fontSize: 20),
                 ),
-                
                 TextFormField(
                   onChanged: (value) {
                     name = value;
                   },
-                 
                 ),
                 SizedBox(
                   height: 15,
@@ -68,7 +65,7 @@ class _AddApiState extends State<AddApi> {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       onPressed: () async {
-                         User? u = await User.checkLogin(name, pass, email);
+                        User? u = await User.checkLogin(name, pass, email);
                         if (u == null) {
                           print("GO");
                           await showDialog(
@@ -89,12 +86,14 @@ class _AddApiState extends State<AddApi> {
                                             backgroundColor: Colors.blue,
                                           ),
                                           onPressed: () {
-                                             Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => potScreen()));
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        potScreen()));
                                           }),
                                     ],
                                   ));
-                         
                         } else if (name == "") {
                           print("ว่าง");
                           await showDialog(

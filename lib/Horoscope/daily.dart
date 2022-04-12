@@ -6,22 +6,22 @@ class Horoscope2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.amber[50],
-        appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back,
-              color: Colors.black,
-            ),
-            onPressed: () {},
+      backgroundColor: Colors.amber[50],
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
           ),
-          elevation: 0,
-          backgroundColor: Colors.amber[50],
-          title: Text(
-            "ดูดวงรายวัน",
-            style: TextStyle(color: Colors.black),
-          ),
+          onPressed: () {},
         ),
-        body: ListView());
+        elevation: 0,
+        backgroundColor: Colors.amber[50],
+        title: Text(
+          "ดูดวงรายวัน",
+          style: TextStyle(color: Colors.black),
+        ),
+      ),
+    );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Horoscope/Zodiac.dart';
 import 'package:flutter_application_1/Horoscope/daily.dart';
 
 class Horoscope extends StatelessWidget {
@@ -52,7 +53,12 @@ class Horoscope extends StatelessWidget {
                   SizedBox(height: 0),
                   SizedBox(
                     child: ElevatedButton.icon(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Zodiac()));
+                        },
                         icon: Icon(Icons.arrow_right),
                         style: ElevatedButton.styleFrom(
                             primary: Colors.lightBlue[900],

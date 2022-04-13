@@ -45,9 +45,9 @@ class _updateApiState extends State<updateApi> {
                   Text(
                     'UPDATE',
                     style: TextStyle(
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontSize: 50,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.blue),
                   ),
                   Text(
                     'แก้ไขข้อมูลส่วนตัว',
@@ -62,8 +62,8 @@ class _updateApiState extends State<updateApi> {
                     onChanged: (value) {
                       email = value;
                     },
-                    validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
-                    decoration: InputDecoration(labelText: "ชื่อ"),
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
+                    decoration: InputDecoration(labelText: "อีเมล"),
                   ),
                   SizedBox(
                     height: 15,
@@ -72,8 +72,8 @@ class _updateApiState extends State<updateApi> {
                       onChanged: (value) {
                         name = value;
                       },
-                      validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
-                      decoration: InputDecoration(labelText: "อีเมล")),
+                      validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
+                      decoration: InputDecoration(labelText: "ชื่อ")),
                   SizedBox(
                     height: 20,
                   ),
@@ -101,7 +101,7 @@ class _updateApiState extends State<updateApi> {
                                       title: Text(''),
                                       backgroundColor: Colors.pink[50],
                                       content: Text(
-                                        '  เเก้ไขเเล้วเด้อ ',
+                                        'เเก้ไขเเล้ว',
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 20),
                                       ),
@@ -177,7 +177,7 @@ class _updateApiState extends State<updateApi> {
                                       title: Text(''),
                                       backgroundColor: Colors.pink[50],
                                       content: Text(
-                                        '  ใส่ passwode ',
+                                        '  ใส่รหัสผ่าน',
                                         style: TextStyle(
                                             color: Colors.black, fontSize: 20),
                                       ),
@@ -221,7 +221,7 @@ class _updateApiState extends State<updateApi> {
                         },
                         icon: Icon(Icons.app_registration_outlined),
                         style: ElevatedButton.styleFrom(
-                            primary: Colors.lightBlue[700],
+                            primary: Colors.lightBlue,
                             shape: new RoundedRectangleBorder(
                               borderRadius: new BorderRadius.circular(30.0),
                             )),

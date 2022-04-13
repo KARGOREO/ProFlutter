@@ -6,7 +6,7 @@ class Horoscope2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.amber[50],
+      backgroundColor: Colors.pink[50],
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(
@@ -16,7 +16,7 @@ class Horoscope2 extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         elevation: 0,
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.pink[200],
         title: Text(
           "ดูดวงรายวัน",
           style: TextStyle(color: Colors.black),
@@ -27,7 +27,7 @@ class Horoscope2 extends StatelessWidget {
           Container(
             height: 200,
             width: 500,
-            decoration: BoxDecoration(color: Colors.blue[100]),
+            decoration: BoxDecoration(color: Colors.pink[200]),
           ),
           SafeArea(
             child: Padding(

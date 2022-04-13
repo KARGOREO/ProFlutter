@@ -17,35 +17,54 @@ class _updateApiState extends State<updateApi> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[50],
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text(
           'อัตเดต',
         ),
         elevation: 0,
-        backgroundColor: Colors.lightBlue[300],
+        backgroundColor: Colors.blue[50],
       ),
       body: GestureDetector(
         onTap: () => FocusScope.of(context).requestFocus(FocusNode()),
         behavior: HitTestBehavior.opaque,
         child: Container(
-          padding: const EdgeInsets.all(20),
+          padding: const EdgeInsets.all(25),
           child: Form(
             child: SingleChildScrollView(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  Text(
+                    'UPDATE',
+                    style: TextStyle(
+                      fontSize: 50,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    'แก้ไขข้อมูลส่วนตัว',
+                    style: TextStyle(
+                      fontSize: 18,
+                    ),
+                  ),
                   SizedBox(
                     height: 15,
                   ),
-                  Text(
-                    'อีเมล',
-                    style: TextStyle(fontSize: 20),
-                  ),
                   TextFormField(
-                      onChanged: (value) {
-                        email = value;
-                      },
-                      decoration: InputDecoration(labelText: "อีเมล")),
+                    onChanged: (value) {
+                      email = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
+                    decoration: InputDecoration(labelText: "ชื่อ"),
+                  ),
                   SizedBox(
                     height: 15,
                   ),
@@ -53,21 +72,20 @@ class _updateApiState extends State<updateApi> {
                       onChanged: (value) {
                         name = value;
                       },
-                      validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
-                      decoration: InputDecoration(labelText: "ชื่อ")),
+                      validator: RequiredValidator(errorText: 'กรุณาป้อนอีเมล'),
+                      decoration: InputDecoration(labelText: "อีเมล")),
                   SizedBox(
-                    height: 15,
-                  ),
-                  Text(
-                    'password',
-                    style: TextStyle(fontSize: 20),
+                    height: 20,
                   ),
                   TextFormField(
-                    onChanged: (value) {
-                      pass = value;
-                    },
-                    validator:
-                        RequiredValidator(errorText: 'กรุณาป้อน Password'),
+                      onChanged: (value) {
+                        pass = value;
+                      },
+                      validator:
+                          RequiredValidator(errorText: 'กรุณาป้อนรหัสผ่าน'),
+                      decoration: InputDecoration(labelText: "รหัสผ่าน")),
+                  SizedBox(
+                    height: 15,
                   ),
                   SizedBox(
                     width: double.infinity,
@@ -203,11 +221,18 @@ class _updateApiState extends State<updateApi> {
                         },
                         icon: Icon(Icons.app_registration_outlined),
                         style: ElevatedButton.styleFrom(
-                            primary: Color.fromARGB(255, 209, 160, 0)),
+                            primary: Colors.lightBlue[700],
+                            shape: new RoundedRectangleBorder(
+                              borderRadius: new BorderRadius.circular(30.0),
+                            )),
                         label: Text(
                           'ตกลง',
                           style: TextStyle(fontSize: 20),
                         )),
+                  ),
+                  Image.asset(
+                    'images/3.png',
+                    height: 300,
                   ),
                 ],
               ),

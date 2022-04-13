@@ -22,6 +22,50 @@ class Horoscope2 extends StatelessWidget {
           style: TextStyle(color: Colors.black),
         ),
       ),
+      body: Stack(children: [
+        Container(
+          height: 150,
+          width: 150,
+          decoration: BoxDecoration(color: Colors.blue[100]),
+        ),
+        SafeArea(
+            child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 20),
+                child: Align(
+                  alignment: Alignment.topRight,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.symmetric(vertical: 40),
+                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 3.5),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: "Search",
+                    icon: Icon(Icons.search),
+                    border: InputBorder.none,
+                  ),
+                ),
+              ),
+              Expanded(
+                  child: GridView.count(
+                crossAxisCount: 2,
+                childAspectRatio: 0.85,
+                crossAxisSpacing: 20,
+                mainAxisSpacing: 25,
+              ))
+            ],
+          ),
+        ))
+      ]),
     );
   }
 }

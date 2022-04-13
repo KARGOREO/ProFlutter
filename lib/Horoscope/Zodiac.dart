@@ -5,6 +5,21 @@ class Zodiac extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.lightBlue[900],
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.white,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.lightBlue[900],
+      ),
+      body: Stack(children: []),
+    );
+  
   }
 }

@@ -5,6 +5,7 @@ class Horoscope2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
     return Scaffold(
       backgroundColor: Colors.amber[50],
       appBar: AppBar(
@@ -16,7 +17,7 @@ class Horoscope2 extends StatelessWidget {
           onPressed: () => Navigator.pop(context),
         ),
         elevation: 0,
-        backgroundColor: Colors.blue[100],
+        backgroundColor: Colors.amber[50],
         title: Text(
           "ดูดวงรายวัน",
           style: TextStyle(color: Colors.black),
@@ -24,11 +25,6 @@ class Horoscope2 extends StatelessWidget {
       ),
       body: Stack(
         children: [
-          Container(
-            height: 200,
-            width: 500,
-            decoration: BoxDecoration(color: Colors.blue[100]),
-          ),
           SafeArea(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20),
@@ -50,97 +46,124 @@ class Horoscope2 extends StatelessWidget {
             child: Column(
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(15.0),
                 ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.only(top: 150.0),
-                    child: ElevatedButton(
-                      child: Text(
-                        'วันอาทิตย์',
-                        style: TextStyle(
-                          fontSize: 20.0,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                      style: ElevatedButton.styleFrom(primary: Colors.red),
-                      onPressed: () {
-                        showDialog(
-                          context: context,
-                          builder: (context) => AlertDialog(
-                            title: Text(
-                              "คนที่เกิดวันอาทิตย์",
-                              style: TextStyle(
-                                fontSize: 20.0,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                            content: Text(
-                              'การงาน - สร้างผลงานได้ดี\n'
-                              'การเงิน - จะได้โชคใหญ่\n'
-                              'ความรัก - พบรักแท้ฉับพลัน\n\n'
-                              'เคล็ดลับเสริมดวงประจำวัน\n\n'
-                              'กราบไหว้บูชาพระอุปคุต จะทำให้เกิดความเป็นโชคดี\n'
-                              'อัญมณีมงคล - ทัวร์มาลีน\n'
-                              'สีมงคล - สีครีม\n'
-                              'เลขนำโชค - 4, 5, 7\n',
-                              style: TextStyle(color: Colors.grey[600]),
-                            ),
-                            actions: [
-                              TextButton(
-                                child: Text('CANCEL'),
-                                onPressed: () => Navigator.pop(context),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
+                Column(
+                  children: [
+                    Image.asset(
+                      'images/animals/dog (1).png',
+                      height: 150,
                     ),
-                  ),
-                ),
-                Center(
-                  child: ElevatedButton(
-                    child: Text(
-                      'วันจันทร์',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                    style: ElevatedButton.styleFrom(
-                        primary: Colors.yellow.shade700),
-                    onPressed: () {
-                      showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          title: Text(
-                            "คนที่เกิดวันจันทร์",
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 15.0),
+                        child: ElevatedButton(
+                          child: Text(
+                            'วันอาทิตย์',
                             style: TextStyle(
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
-                          content: Text(
-                            'การงาน - เกิดการชะลอตัวในการทำธุรกิจ\n'
-                            'การเงิน - ใช้เงินมากเป็นพิเศษ\n'
-                            'ความรัก - เกิดความตึงเครียด\n\n'
-                            'เคล็ดลับเสริมดวงประจำวัน\n\n'
-                            'ทำบุญเพื่อร่วมบริจาคในการซื้อที่ดินให้กับวัด\n'
-                            'อัญมณีมงคล - ฟลูออไรต์\n'
-                            'สีมงคล - สีเขียว\n'
-                            'เลขนำโชค - 0, 4, 6, 8\n',
-                            style: TextStyle(color: Colors.grey[600]),
+                          style: ElevatedButton.styleFrom(
+                            primary: Colors.red,
+                            onPrimary: Colors.white,
+                            shadowColor: Colors.grey,
+                            shape: const BeveledRectangleBorder(
+                                borderRadius:
+                                    BorderRadius.all(Radius.circular(5))),
+                            elevation: 5,
                           ),
-                          actions: [
-                            TextButton(
-                              child: Text('CANCEL'),
-                              onPressed: () => Navigator.pop(context),
-                            ),
-                          ],
+                          onPressed: () {
+                            showDialog(
+                              context: context,
+                              builder: (context) => AlertDialog(
+                                title: Text(
+                                  "คนที่เกิดวันอาทิตย์",
+                                  style: TextStyle(
+                                    fontSize: 20.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                content: Text(
+                                  'การงาน - สร้างผลงานได้ดี\n'
+                                  'การเงิน - จะได้โชคใหญ่\n'
+                                  'ความรัก - พบรักแท้ฉับพลัน\n\n'
+                                  'เคล็ดลับเสริมดวงประจำวัน\n\n'
+                                  'กราบไหว้บูชาพระอุปคุต จะทำให้เกิดความเป็นโชคดี\n'
+                                  'อัญมณีมงคล - ทัวร์มาลีน\n'
+                                  'สีมงคล - สีครีม\n'
+                                  'เลขนำโชค - 4, 5, 7\n',
+                                  style: TextStyle(color: Colors.grey[600]),
+                                ),
+                                actions: [
+                                  TextButton(
+                                    child: Text('CANCEL'),
+                                    onPressed: () => Navigator.pop(context),
+                                  ),
+                                ],
+                              ),
+                            );
+                          },
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    ),
+                  ],
+                ),
+                Column(
+                  children: [
+                    Center(
+                      child: ElevatedButton(
+                        child: Text(
+                          'วันจันทร์',
+                          style: TextStyle(
+                            fontSize: 20.0,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        style: ElevatedButton.styleFrom(
+                          primary: Colors.yellow.shade700,
+                          onPrimary: Colors.white,
+                          shadowColor: Colors.grey,
+                          shape: const BeveledRectangleBorder(
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(5))),
+                          elevation: 5,
+                        ),
+                        onPressed: () {
+                          showDialog(
+                            context: context,
+                            builder: (context) => AlertDialog(
+                              title: Text(
+                                "คนที่เกิดวันจันทร์",
+                                style: TextStyle(
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              content: Text(
+                                'การงาน - เกิดการชะลอตัวในการทำธุรกิจ\n'
+                                'การเงิน - ใช้เงินมากเป็นพิเศษ\n'
+                                'ความรัก - เกิดความตึงเครียด\n\n'
+                                'เคล็ดลับเสริมดวงประจำวัน\n\n'
+                                'ทำบุญเพื่อร่วมบริจาคในการซื้อที่ดินให้กับวัด\n'
+                                'อัญมณีมงคล - ฟลูออไรต์\n'
+                                'สีมงคล - สีเขียว\n'
+                                'เลขนำโชค - 0, 4, 6, 8\n',
+                                style: TextStyle(color: Colors.grey[600]),
+                              ),
+                              actions: [
+                                TextButton(
+                                  child: Text('CANCEL'),
+                                  onPressed: () => Navigator.pop(context),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
                 ),
                 Center(
                   child: ElevatedButton(
@@ -151,7 +174,14 @@ class Horoscope2 extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(primary: Colors.pink),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.pink,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.grey,
+                      shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))),
+                      elevation: 5,
+                    ),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -195,7 +225,13 @@ class Horoscope2 extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.orange.shade700),
+                      primary: Colors.orange.shade700,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.grey,
+                      shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))),
+                      elevation: 5,
+                    ),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -238,7 +274,14 @@ class Horoscope2 extends StatelessWidget {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    style: ElevatedButton.styleFrom(primary: Colors.green),
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.grey,
+                      shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))),
+                      elevation: 5,
+                    ),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -282,7 +325,13 @@ class Horoscope2 extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.blueAccent.shade400),
+                      primary: Colors.blueAccent.shade400,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.grey,
+                      shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))),
+                      elevation: 5,
+                    ),
                     onPressed: () {
                       showDialog(
                         context: context,
@@ -326,7 +375,13 @@ class Horoscope2 extends StatelessWidget {
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                        primary: Colors.purple.shade600),
+                      primary: Colors.purple.shade600,
+                      onPrimary: Colors.white,
+                      shadowColor: Colors.grey,
+                      shape: const BeveledRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(5))),
+                      elevation: 5,
+                    ),
                     onPressed: () {
                       showDialog(
                         context: context,

@@ -7,6 +7,7 @@ import 'package:flutter_application_1/index/search.dart';
 import 'package:flutter_application_1/screen/home.dart';
 
 import 'package:flutter_application_1/index/Hom1.dart';
+import 'package:flutter_application_1/update.dart';
 
 
 void main() {
@@ -23,7 +24,11 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+
+      home: updateApi(),
+
+      
+
     );
   }
 }

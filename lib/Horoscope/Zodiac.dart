@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class Zodiac extends StatelessWidget {
+class Zodiac extends StatefulWidget {
   const Zodiac({Key? key}) : super(key: key);
 
+  @override
+  State<Zodiac> createState() => _ZodiacState();
+}
+
+class _ZodiacState extends State<Zodiac> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -18,8 +23,6 @@ class Zodiac extends StatelessWidget {
         elevation: 0,
         backgroundColor: Colors.lightBlue[900],
       ),
-      body: Stack(children: []),
     );
-  
   }
 }

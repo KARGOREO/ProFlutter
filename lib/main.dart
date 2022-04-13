@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Horoscope/Zodiac.dart';
 
 import 'package:flutter_application_1/LoginApi.dart';
 import 'package:flutter_application_1/index/search.dart';
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: Search(),
+      home: Horoscope(),
     );
   }
 }

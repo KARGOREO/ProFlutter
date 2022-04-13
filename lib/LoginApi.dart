@@ -6,7 +6,8 @@ import 'package:flutter_application_1/screen/home.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/profileApi.dart';
-import 'package:flutter_application_1/screen/homeTest.dart';
+import 'package:flutter_application_1/update.dart';
+
 
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:http/http.dart' as http;
@@ -198,7 +199,7 @@ class _potScreenState extends State<potScreen> {
                                 Navigator.push(
                                     context,
                                     MaterialPageRoute(
-                                        builder: (context) => AddApi()));
+                                        builder: (context) => updateApi()));
                               },
                               icon: Icon(Icons.pending),
                               style: ElevatedButton.styleFrom(

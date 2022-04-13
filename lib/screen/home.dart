@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/Horoscope/Horoscope.dart';
+import 'package:flutter_application_1/Horoscope/daily.dart';
 
 import 'package:flutter_application_1/api/natwortking/login.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
-import 'package:flutter_application_1/Horoscope/Horoscope.dart';
+
 import 'package:flutter_application_1/index/search.dart';
 import 'package:flutter_application_1/profileApi.dart';
 
@@ -30,8 +32,31 @@ class Home extends StatelessWidget {
               ProfileApi(user),
             ],
           ),
+          backgroundColor: Color.fromARGB(255, 244, 212, 142),
+          bottomNavigationBar: TabBar(
+            tabs: [
+              Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 240, 84, 133),
+                size: 40,
               ),
-    );
-        
+              Icon(
+                Icons.search,
+                color: Color.fromARGB(255, 240, 84, 133),
+                size: 40,
+              ),
+              Icon(
+                Icons.favorite,
+                color: Color.fromARGB(255, 240, 84, 133),
+                size: 40,
+              ),
+              Icon(
+                Icons.person,
+                color: Color.fromARGB(255, 240, 84, 133),
+                size: 40,
+              ),
+            ],
+          ),
+        ));
   }
 }

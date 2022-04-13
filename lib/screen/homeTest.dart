@@ -1,47 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
+import 'package:flutter_application_1/Horoscope/Horoscope.dart';
+import 'package:flutter_application_1/api/natwortking/login.dart';
+import 'package:flutter_application_1/screen/home.dart';
 
-class BottomNavBar extends StatelessWidget {
-  List<String> _options=[
-    "HOME","CART","MENU","SETTINGS","FAVORITES"
-  ];
-  int _currentIndex=0;
-
-
-  
+class HomeScreen extends StatelessWidget {
+  final User user;
+  const HomeScreen(this.user);
 
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-    
-      body: Container(
-        color: Colors.red,
-        child: Center(
-            child: Text(_options[_currentIndex],
-          style: TextStyle(
-              color: Colors.white, fontWeight: FontWeight.bold, fontSize: 40),
-        )),
-      ),
-      bottomNavigationBar: CurvedNavigationBar(
-        buttonBackgroundColor: Colors.white,
-        backgroundColor: Colors.red,
-        
-       
-        items: <Widget>[
-          Icon(Icons.home,color: Colors.red,),
-          Icon(Icons.home,color: Colors.red,),
-          Icon(Icons.home,color: Colors.red,),
-          Icon(Icons.settings,color: Colors.red,),
-          Icon(Icons.favorite,color: Colors.red,),
+    return Scaffold(
 
-        ],
-        onTap: (index){
-          setState() {
-            _currentIndex=index;
-          }
-        },
-      ),
+      bottomNavigationBar: Home(user),
+      body: Horoscope(),
     );
-
   }
 }

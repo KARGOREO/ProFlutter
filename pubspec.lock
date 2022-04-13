@@ -124,11 +124,7 @@ packages:
       name: flutter_svg
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.22.0"
-=======
     version: "1.0.3"
->>>>>>> ebe782bece17a086548f3f7e31385ef4516f3a59
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -146,13 +142,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0"
-  google_nav_bar:
-    dependency: "direct main"
-    description:
-      name: google_nav_bar
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.0.6"
   http:
     dependency: "direct main"
     description:
@@ -264,22 +253,14 @@ packages:
       name: path_drawing
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.5.1+1"
-=======
     version: "1.0.0"
->>>>>>> ebe782bece17a086548f3f7e31385ef4516f3a59
   path_parsing:
     dependency: transitive
     description:
       name: path_parsing
       url: "https://pub.dartlang.org"
     source: hosted
-<<<<<<< HEAD
-    version: "0.2.1"
-=======
     version: "1.0.0"
->>>>>>> ebe782bece17a086548f3f7e31385ef4516f3a59
   petitparser:
     dependency: transitive
     description:
@@ -376,8 +357,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.3.1"
-<<<<<<< HEAD
-=======
   yaml:
     dependency: transitive
     description:
@@ -385,7 +364,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "3.1.0"
->>>>>>> ebe782bece17a086548f3f7e31385ef4516f3a59
 sdks:
   dart: ">=2.16.1 <3.0.0"
   flutter: ">=2.5.0"

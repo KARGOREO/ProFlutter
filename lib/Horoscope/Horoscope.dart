@@ -8,11 +8,7 @@ class Horoscope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text("ดูดวง ทนายโชคชะตา"),
-        backgroundColor: Colors.pinkAccent,
-        elevation: 0,
-      ),
+      
       backgroundColor: Colors.pink[50],
       body: Container(
         padding: const EdgeInsets.all(8.0),

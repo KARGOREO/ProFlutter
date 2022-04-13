@@ -37,6 +37,7 @@ class _updateApiState extends State<updateApi> {
                   SizedBox(
                     height: 15,
                   ),
+                  Text('ใส้Emailของคุณ'),
                   Text(
                     'อีเมล',
                     style: TextStyle(fontSize: 20),
@@ -49,6 +50,7 @@ class _updateApiState extends State<updateApi> {
                   SizedBox(
                     height: 15,
                   ),
+                    Text('Name ที่ต้องการเปลี่ยน เเละ รหัสผ่าน'),
                   TextFormField(
                       onChanged: (value) {
                         name = value;

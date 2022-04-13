@@ -217,8 +217,10 @@ class _AddApiState extends State<AddApi> {
                     ),
                     TextButton(
                       onPressed: (() {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) => AddApi()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => potScreen()));
                       }),
                       child: Text('เข้าสู่ระบบ'),
                     ),

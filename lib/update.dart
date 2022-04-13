@@ -4,7 +4,7 @@ import 'package:form_field_validator/form_field_validator.dart';
 import 'api/natwortking/updateApi.dart';
 
 class updateApi extends StatefulWidget {
-  const updateApi({ Key? key }) : super(key: key);
+  const updateApi({Key? key}) : super(key: key);
 
   @override
   State<updateApi> createState() => _updateApiState();
@@ -16,8 +16,14 @@ class _updateApiState extends State<updateApi> {
   String email = "";
   @override
   Widget build(BuildContext context) {
-     return Scaffold(
-      appBar: AppBar(title: Text('')),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'อัตเดต',
+        ),
+        elevation: 0,
+        backgroundColor: Colors.lightBlue[300],
+      ),
       body: Container(
         padding: const EdgeInsets.all(20),
         child: Form(
@@ -29,30 +35,23 @@ class _updateApiState extends State<updateApi> {
                   height: 15,
                 ),
                 Text(
-                  'email',
+                  'อีเมล',
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
-                  onChanged: (value) {
-                    email = value;
-                  },
-                 
-                ),
+                    onChanged: (value) {
+                      email = value;
+                    },
+                    decoration: InputDecoration(labelText: "อีเมล")),
                 SizedBox(
                   height: 15,
                 ),
-                Text(
-                  'name',
-                  style: TextStyle(fontSize: 20),
-                ),
-                
                 TextFormField(
-                  onChanged: (value) {
-                    name = value;
-                  },
-                 
-                ),
-                
+                    onChanged: (value) {
+                      name = value;
+                    },
+                    validator: RequiredValidator(errorText: 'กรุณาป้อนชื่อ'),
+                    decoration: InputDecoration(labelText: "ชื่อ")),
                 SizedBox(
                   height: 15,
                 ),
@@ -70,7 +69,7 @@ class _updateApiState extends State<updateApi> {
                   width: double.infinity,
                   child: ElevatedButton.icon(
                       onPressed: () async {
-                         User? update = await User.checkLogin(name, pass, email);
+                        User? update = await User.checkLogin(name, pass, email);
                         if (email != "") {
                           print("GO");
                           await showDialog(
@@ -91,12 +90,14 @@ class _updateApiState extends State<updateApi> {
                                             backgroundColor: Colors.blue,
                                           ),
                                           onPressed: () {
-                                             Navigator.push(context,
-                              MaterialPageRoute(builder: (context) => potScreen()));
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        potScreen()));
                                           }),
                                     ],
                                   ));
-                         
                         } else if (name == "") {
                           print("ว่าง");
                           await showDialog(

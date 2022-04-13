@@ -23,7 +23,7 @@ class _potScreenState extends State<potScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color.fromARGB(255, 241, 229, 204),
+      backgroundColor: Colors.amber[50],
       body: Container(
         padding: const EdgeInsets.all(25),
         child: Form(

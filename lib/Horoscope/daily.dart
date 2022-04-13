@@ -7,25 +7,25 @@ class Horoscope2 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.amber[50],
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(
-            Icons.arrow_back,
-            color: Colors.black,
-          ),
-          onPressed: () {},
-        ),
-        elevation: 0,
-        backgroundColor: Colors.amber[50],
-        title: Text(
-          "ดูดวงรายวัน",
-          style: TextStyle(color: Colors.black),
-        ),
-      ),
+      // appBar: AppBar(
+      //   leading: IconButton(
+      //     icon: Icon(
+      //       Icons.arrow_back,
+      //       color: Colors.black,
+      //     ),
+      //     onPressed: () {},
+      //   ),
+      //   elevation: 0,
+      //   backgroundColor: Colors.amber[50],
+      //   title: Text(
+      //     "ดูดวงรายวัน",
+      //     style: TextStyle(color: Colors.black),
+      //   ),
+      // ),
       body: Stack(children: [
         Container(
-          height: 150,
-          width: 150,
+          height: 300,
+          width: 500,
           decoration: BoxDecoration(color: Colors.blue[100]),
         ),
         SafeArea(
@@ -56,11 +56,18 @@ class Horoscope2 extends StatelessWidget {
                 ),
               ),
               Expanded(
-                  child: GridView.count(
-                crossAxisCount: 2,
-                childAspectRatio: 0.85,
-                crossAxisSpacing: 20,
-                mainAxisSpacing: 25,
+                  child: Card(
+                child: InkWell(
+                  splashColor: Colors.blue.withAlpha(30),
+                  onTap: () {
+                    debugPrint('Card tapped.');
+                  },
+                  child: const SizedBox(
+                    width: 300,
+                    height: 100,
+                    child: Text('A card that can be tapped'),
+                  ),
+                ),
               ))
             ],
           ),

@@ -70,7 +70,11 @@ flutter:
   assets:
     - images/
     - images/animals/
-  #   - images/a_dot_ham.jpeg
+  
+  fonts:
+    - family: Biscuit
+      fonts:
+      - asset: images/font/Biscuit.ttf
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

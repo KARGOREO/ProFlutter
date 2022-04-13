@@ -61,6 +61,7 @@ class Horoscope2 extends StatelessWidget {
                           child: Text(
                             'วันอาทิตย์',
                             style: TextStyle(
+                              fontFamily: 'Biscuit',
                               fontSize: 20.0,
                               fontWeight: FontWeight.bold,
                             ),
@@ -117,6 +118,7 @@ class Horoscope2 extends StatelessWidget {
                         child: Text(
                           'วันจันทร์',
                           style: TextStyle(
+                            fontFamily: 'Biscuit',
                             fontSize: 20.0,
                             fontWeight: FontWeight.bold,
                           ),
@@ -170,6 +172,7 @@ class Horoscope2 extends StatelessWidget {
                     child: Text(
                       'วันอังคาร',
                       style: TextStyle(
+                        fontFamily: 'Biscuit',
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -220,12 +223,13 @@ class Horoscope2 extends StatelessWidget {
                     child: Text(
                       'วันพุธ',
                       style: TextStyle(
+                        fontFamily: 'Biscuit',
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.orange.shade700,
+                      primary: Colors.green,
                       onPrimary: Colors.white,
                       shadowColor: Colors.grey,
                       shape: const BeveledRectangleBorder(
@@ -270,12 +274,13 @@ class Horoscope2 extends StatelessWidget {
                     child: Text(
                       'วันพฤหัสบดี',
                       style: TextStyle(
+                        fontFamily: 'Biscuit',
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
                     style: ElevatedButton.styleFrom(
-                      primary: Colors.green,
+                      primary: Colors.orange[700],
                       onPrimary: Colors.white,
                       shadowColor: Colors.grey,
                       shape: const BeveledRectangleBorder(
@@ -320,6 +325,7 @@ class Horoscope2 extends StatelessWidget {
                     child: Text(
                       'วันศุกร์',
                       style: TextStyle(
+                        fontFamily: 'Biscuit',
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),
@@ -370,6 +376,7 @@ class Horoscope2 extends StatelessWidget {
                     child: Text(
                       'วันเสาร์',
                       style: TextStyle(
+                        fontFamily: 'Biscuit',
                         fontSize: 20.0,
                         fontWeight: FontWeight.bold,
                       ),

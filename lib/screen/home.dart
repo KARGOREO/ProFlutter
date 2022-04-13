@@ -15,9 +15,9 @@ class Home extends StatelessWidget {
     int _currentIndex = 0;
     List<Widget> _pageWidget = <Widget>[
       Home1(),
-      ProfileApi(user),
       Search(),
       Horoscope(),
+      ProfileApi(user),
     ];
     return DefaultTabController(
         length: 4,
@@ -25,25 +25,34 @@ class Home extends StatelessWidget {
           body: TabBarView(
             children: [
               Home1(),
-              ProfileApi(user),
               Search(),
               Horoscope(),
+              ProfileApi(user),
             ],
           ),
-          backgroundColor: Color.fromARGB(255, 233, 152, 30),
+          backgroundColor: Color.fromARGB(255, 244, 212, 142),
           bottomNavigationBar: TabBar(
             tabs: [
-              Tab(
-                text: "Home",
+              Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 240, 84, 133),
+                size: 40,
+                
               ),
-              Tab(
-                text: "โปรไฟล์",
+              Icon(
+                Icons.search,
+                color: Color.fromARGB(255, 240, 84, 133),
+                    size: 40,
               ),
-              Tab(
-                text: "ค้นหา",
+              Icon(
+                Icons.favorite,
+                color: Color.fromARGB(255, 240, 84, 133),
+                    size: 40,
               ),
-              Tab(
-                text: "ดูดวง ",
+              Icon(
+                Icons.person,
+                   color: Color.fromARGB(255, 240, 84, 133),
+                    size: 40,
               ),
             ],
           ),

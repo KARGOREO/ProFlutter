@@ -7,6 +7,8 @@ import 'package:flutter_application_1/screen/home.dart';
 
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/index/Horoscope.dart';
+import 'package:flutter_application_1/screen/homeTest.dart';
+import 'package:flutter_application_1/screen/test.dart';
 
 void main() {
   runApp(const MyApp());

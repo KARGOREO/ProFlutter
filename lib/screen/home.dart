@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Horoscope/Horoscope.dart';
-import 'package:flutter_application_1/Horoscope/daily.dart';
+
 
 import 'package:flutter_application_1/api/natwortking/login.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
@@ -37,8 +37,10 @@ class Home extends StatelessWidget {
             tabs: [
               Icon(
                 Icons.home,
+                
                 color: Color.fromARGB(255, 240, 84, 133),
                 size: 40,
+                
               ),
               Icon(
                 Icons.search,

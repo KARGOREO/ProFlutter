@@ -10,9 +10,14 @@ class ProfileApi extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.amber[50],
       body: SafeArea(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            SizedBox(
+              height: 20,
+            ),
             Center(
               child: SizedBox(
                 height: 200,
@@ -24,18 +29,18 @@ class ProfileApi extends StatelessWidget {
               height: 40,
             ),
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "ชื่อ :  ",
-                      style: TextStyle(fontSize: 40),
+                      "Name :  ",
+                      style: TextStyle(fontSize: 30),
                     ),
                     Text(
                       user.username,
-                      style: TextStyle(fontSize: 50),
+                      style: TextStyle(fontSize: 30),
                     ),
                   ],
                 ),
@@ -45,34 +50,34 @@ class ProfileApi extends StatelessWidget {
               height: 20,
             ),
             Padding(
-              padding: const EdgeInsets.all(0.0),
+              padding: const EdgeInsets.all(8.0),
               child: Center(
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       "Email : ",
-                      style: TextStyle(fontSize: 40),
+                      style: TextStyle(fontSize: 30),
                     ),
                     Text(
                       user.email,
-                      style: TextStyle(fontSize: 40),
+                      style: TextStyle(fontSize: 30),
                     ),
                   ],
                 ),
               ),
             ),
-             SizedBox(
+            SizedBox(
               height: 180,
             ),
             Center(
               child: Wrap(
                 children: [
-                   SizedBox(
-              width: 20,
-            ),
                   SizedBox(
-                    width: 150,
+                    width: 20,
+                  ),
+                  SizedBox(
+                    width: 180,
                     child: ElevatedButton.icon(
                         onPressed: () {
                           Navigator.push(
@@ -80,11 +85,14 @@ class ProfileApi extends StatelessWidget {
                               MaterialPageRoute(
                                   builder: (context) => deleteApi()));
                         },
-                        icon: Icon(Icons.pending),
+                        icon: Icon(Icons.delete),
                         style: ElevatedButton.styleFrom(
-                            primary: Color.fromARGB(255, 251, 0, 146)),
+                              primary: Colors.yellow[800],
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(20.0),
+                              )),
                         label: Text(
-                          'ลบ User',
+                          'Delete User',
                           style: TextStyle(fontSize: 20),
                         )),
                   ),
@@ -99,9 +107,12 @@ class ProfileApi extends StatelessWidget {
                         },
                         icon: Icon(Icons.pending),
                         style: ElevatedButton.styleFrom(
-                            primary: Color.fromARGB(255, 251, 0, 146)),
+                              primary: Colors.yellow[800],
+                              shape: new RoundedRectangleBorder(
+                                borderRadius: new BorderRadius.circular(20.0),
+                              )),
                         label: Text(
-                          'ออกจากระบบ',
+                          'Log out',
                           style: TextStyle(fontSize: 20),
                         )),
                   ),

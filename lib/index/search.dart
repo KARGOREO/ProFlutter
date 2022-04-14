@@ -111,7 +111,7 @@ class _SearchState extends State<Search> {
                                         title: Text(''),
                                         backgroundColor: Colors.pink[50],
                                         content: Text(
-                                          '  ใส่ เบอร์นำเเนะ ',
+                                          '  กรุณาใส่เบอร์ของคุณ ',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 20),
@@ -128,7 +128,8 @@ class _SearchState extends State<Search> {
                                               }),
                                         ],
                                       ));
-                            } else {
+                            }
+                            else {
                               print("ว่าง");
                               await showDialog(
                                   context: context,
@@ -137,7 +138,7 @@ class _SearchState extends State<Search> {
                                         title: Text(''),
                                         backgroundColor: Colors.pink[50],
                                         content: Text(
-                                          '  เสียใจหลายๆเด้อ ',
+                                          '  เสียใจด้วยคุณไม่ถูกรางวัล ',
                                           style: TextStyle(
                                               color: Colors.black,
                                               fontSize: 20),

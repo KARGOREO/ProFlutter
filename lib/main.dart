@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Horoscope/Zodiac.dart';
 
 import 'package:flutter_application_1/LoginApi.dart';
-import 'package:flutter_application_1/index/search.dart';
-
-import 'package:flutter_application_1/screen/home.dart';
-
-import 'package:flutter_application_1/index/Hom1.dart';
-import 'package:flutter_application_1/update.dart';
-
 
 void main() {
   runApp(const MyApp());
@@ -24,11 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-
-      home: updateApi(),
-
-      
-
+      home: potScreen(),
     );
   }
 }

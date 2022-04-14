@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/Horoscope/Zodiac.dart';
 import 'package:flutter_application_1/Horoscope/daily.dart';
 
 class Horoscope extends StatelessWidget {
@@ -8,7 +7,6 @@ class Horoscope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       backgroundColor: Colors.pink[50],
       body: Container(
         padding: const EdgeInsets.all(8.0),
@@ -43,26 +41,6 @@ class Horoscope extends StatelessWidget {
                             )),
                         label: Text(
                           "ดูดวงรายวัน",
-                          style: TextStyle(fontSize: 18),
-                        )),
-                  ),
-                  SizedBox(height: 0),
-                  SizedBox(
-                    child: ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => Zodiac()));
-                        },
-                        icon: Icon(Icons.arrow_right),
-                        style: ElevatedButton.styleFrom(
-                            primary: Colors.lightBlue[900],
-                            shape: new RoundedRectangleBorder(
-                              borderRadius: new BorderRadius.circular(30.0),
-                            )),
-                        label: Text(
-                          "ดวงจีน 12 นักษัตร",
                           style: TextStyle(fontSize: 18),
                         )),
                   ),

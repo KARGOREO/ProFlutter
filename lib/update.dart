@@ -22,12 +22,9 @@ class _updateApiState extends State<updateApi> {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: Colors.black,
+            color: Colors.blue[400],
           ),
           onPressed: () => Navigator.pop(context),
-        ),
-        title: Text(
-          'อัตเดต',
         ),
         elevation: 0,
         backgroundColor: Colors.blue[50],

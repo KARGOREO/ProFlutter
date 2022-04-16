@@ -12,7 +12,7 @@ class Horoscope2 extends StatelessWidget {
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: Colors.black,
+            color: Colors.amber[700],
           ),
           onPressed: () => Navigator.pop(context),
         ),

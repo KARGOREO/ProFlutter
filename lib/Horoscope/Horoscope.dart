@@ -7,6 +7,17 @@ class Horoscope extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.arrow_back,
+            color: Colors.pink[700],
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.pink[50],
+      ),
       backgroundColor: Colors.pink[50],
       body: Container(
         padding: const EdgeInsets.all(8.0),

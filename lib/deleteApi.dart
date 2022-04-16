@@ -53,6 +53,7 @@ class _deleteApiState extends State<deleteApi> {
                   style: TextStyle(fontSize: 20),
                 ),
                 TextFormField(
+                                 obscureText: true,
                   onChanged: (value) {
                     pass = value;
                   },

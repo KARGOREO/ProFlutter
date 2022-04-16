@@ -78,6 +78,7 @@ class _updateApiState extends State<updateApi> {
                     height: 20,
                   ),
                   TextFormField(
+                                   obscureText: true,
                       onChanged: (value) {
                         pass = value;
                       },

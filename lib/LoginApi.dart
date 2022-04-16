@@ -1,13 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/addApi.dart';
 import 'package:flutter_application_1/api/natwortking/login.dart';
+import 'package:flutter_application_1/screen/HomeTest.dart';
+import 'package:flutter_application_1/screen/HomeTestGG.dart';
 
 import 'package:flutter_application_1/screen/home.dart';
 import 'package:flutter_application_1/index/Hom1.dart';
 import 'package:flutter_application_1/main.dart';
 import 'package:flutter_application_1/profileApi.dart';
 import 'package:flutter_application_1/update.dart';
-
 
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:http/http.dart' as http;
@@ -52,17 +53,32 @@ class _potScreenState extends State<potScreen> {
                         email = value;
                       },
                       validator: RequiredValidator(errorText: 'กรุณาป้อนEmail'),
-                      decoration: InputDecoration(labelText: "อีเมล")),
+                      decoration: InputDecoration(
+                        labelText: "อีเมล",
+                        icon: Icon(
+                          Icons.email,
+                          color: Color.fromARGB(255, 205, 155, 4),
+                        ),
+                      )),
                   SizedBox(
                     height: 10,
                   ),
                   TextFormField(
-                      onChanged: (value) {
-                        pass = value;
-                      },
-                      validator:
-                          RequiredValidator(errorText: 'กรุณาป้อน Password'),
-                      decoration: InputDecoration(labelText: "รหัสผ่าน")),
+                    onChanged: (value) {
+                      pass = value;
+                    },
+                    obscureText: true,
+                    validator:
+                        RequiredValidator(errorText: 'กรุณาป้อน Password'),
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: "รหัสผ่าน",
+                      icon: Icon(
+                        Icons.lock,
+                         color: Color.fromARGB(255, 205, 155, 4),
+                      ),
+                    ),
+                  ),
                   SizedBox(
                     height: 10,
                   ),

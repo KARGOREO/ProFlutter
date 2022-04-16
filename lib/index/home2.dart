@@ -1,12 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/index/Hom1.dart';
 
-class Home2 extends StatelessWidget {
-  const Home2({ Key? key }) : super(key: key);
-
+class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Home1(),
+        ],
+      ),
     );
   }
 }

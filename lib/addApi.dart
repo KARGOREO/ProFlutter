@@ -60,6 +60,7 @@ class _AddApiState extends State<AddApi> {
                     height: 15,
                   ),
                   TextFormField(
+                                   obscureText: true,
                       onChanged: (value) {
                         pass = value;
                       },
